@@ -3,6 +3,7 @@
 import { FormEvent, useState } from "react";
 import { ArrowUpRight, Check, Copy } from "lucide-react";
 import { site } from "@/lib/data";
+import SocialLinks from "./SocialLinks";
 
 export default function Contact() {
   const [copied, setCopied] = useState(false);
@@ -58,16 +59,9 @@ export default function Contact() {
                 </span>
                 <ArrowUpRight size={16} className="text-mist" />
               </a>
-              <div className="flex flex-wrap gap-3 pt-2">
-                <a href={site.socials.github} target="_blank" rel="noreferrer" className="kicker text-[11px] hover:text-cyan">
-                  GitHub
-                </a>
-                <a href={site.socials.linkedin} target="_blank" rel="noreferrer" className="kicker text-[11px] hover:text-cyan">
-                  LinkedIn
-                </a>
-                <a href={site.socials.x} target="_blank" rel="noreferrer" className="kicker text-[11px] hover:text-cyan">
-                  X
-                </a>
+              <div className="pt-2">
+                <p className="kicker mb-3 text-[10px]">Social</p>
+                <SocialLinks />
               </div>
             </div>
           </div>

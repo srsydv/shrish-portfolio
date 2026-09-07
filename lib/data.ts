@@ -13,8 +13,8 @@ export const site = {
   availability: "Currently at Big Ladder",
   socials: {
     github: "https://github.com/srsydv",
-    linkedin: "https://www.linkedin.com/in/srsydv",
-    x: "https://x.com/srsydv",
+    linkedin: "https://linkedin.com/in/srsydv",
+    x: "https://x.com/srs_ydv",
   },
 } as const;
 

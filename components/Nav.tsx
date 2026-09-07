@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { nav, site } from "@/lib/data";
+import SocialLinks from "./SocialLinks";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
@@ -48,6 +49,7 @@ export default function Nav() {
               {item.label}
             </a>
           ))}
+          <SocialLinks compact />
           <a
             href={site.resume}
             download
@@ -80,11 +82,12 @@ export default function Nav() {
                 {item.label}
               </a>
             ))}
+            <SocialLinks className="mt-4" />
             <a
               href={site.resume}
               download
               onClick={() => setOpen(false)}
-              className="mt-4 kicker text-cyan"
+              className="mt-2 kicker text-cyan"
             >
               Download resume
             </a>

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowDownRight, ArrowUpRight } from "lucide-react";
 import { roles, site, stats } from "@/lib/data";
 import NetworkCanvas from "./NetworkCanvas";
+import SocialLinks from "./SocialLinks";
 import { useEffect, useState } from "react";
 
 export default function Hero() {
@@ -87,6 +88,7 @@ export default function Hero() {
               Start a protocol
               <ArrowUpRight size={16} />
             </a>
+            <SocialLinks compact className="ml-1" />
           </motion.div>
         </div>
 

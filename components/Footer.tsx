@@ -1,4 +1,5 @@
 import { site } from "@/lib/data";
+import SocialLinks from "./SocialLinks";
 
 export default function Footer() {
   return (
@@ -8,13 +9,8 @@ export default function Footer() {
           <p className="text-sm text-foam">© {new Date().getFullYear()} {site.name}</p>
           <p className="mt-1 font-mono text-[11px] text-mist">Backend & blockchain · Built for the chain, deployed on Vercel.</p>
         </div>
-        <div className="flex gap-5">
-          <a href={site.socials.github} className="kicker text-[11px] hover:text-cyan" target="_blank" rel="noreferrer">
-            GitHub
-          </a>
-          <a href={site.socials.linkedin} className="kicker text-[11px] hover:text-cyan" target="_blank" rel="noreferrer">
-            LinkedIn
-          </a>
+        <div className="flex flex-wrap items-center gap-5">
+          <SocialLinks compact />
           <a href={site.resume} download className="kicker text-[11px] hover:text-cyan">
             Resume
           </a>
