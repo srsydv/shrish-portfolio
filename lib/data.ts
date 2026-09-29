@@ -89,12 +89,12 @@ export const projects = [
     category: "DeFi · Vaults",
     year: "DeFi",
     blurb:
-      "Velvet is a decentralized asset-management protocol. Users deposit once into an ERC-4626-style vault; strategies, oracles, and keepers allocate capital, harvest yield, and rebalance without the depositor babysitting positions. I designed and shipped the smart-contract vault system — the share accounting, strategy plugins, fee rails, and the full deposit → invest → harvest → withdraw path.",
+      "Velvet Capital is a modular DeFi vault. A user deposits the underlying token once and receives shares; a manager deploys idle capital into strategies, and a keeper harvests yield and rebalances so the depositor never sits on positions. I designed and shipped the smart-contract system — share accounting, strategy plugins, fee rails, oracles, swap routing, and the full deposit → invest → harvest → withdraw path.",
     details: [
-      "Upgradeable UUPS vault with ERC-4626 share accounting, idle capital, and TVL marked across plugged-in strategies",
-      "Aave V3 lending and Uniswap V3 LP strategies, with Chainlink USD oracles, staleness checks, and 0x / whitelisted router swaps",
-      "Fee module for time-prorated management fees, realized performance fees, and entry/exit fees — plus owner / manager / keeper roles",
-      "Keeper-driven harvest and rebalance bots, then full E2E flows (deposit, invest, harvest, withdraw) on Hardhat mainnet forks",
+      "Upgradeable UUPS vault with ERC-4626 share accounting, a deposit cap, and TVL marked as idle assets plus every plugged-in strategy. Withdrawals burn shares, then pull idle funds and a target-weight slice from each strategy",
+      "Aave V3 lending marked to market from the liquidity index, and a Uniswap V3 WETH/USDC position that books profit only when collected fees are swapped back to the want token",
+      "Chainlink USD prices with heartbeat staleness checks and token/ETH routes. Swaps go through a whitelisted exchange handler that enforces minOut; the keeper builds 0x routes off-chain",
+      "Time-prorated management fees, performance fees on realized profit, and capped entry/exit fees, split across owner, manager, and keeper. Rebalance sits behind a cooldown, and the full flow is covered on an Arbitrum fork",
     ],
     stack: ["Solidity", "Hardhat", "UUPS", "Aave V3", "Uniswap V3", "Chainlink", "ERC-4626"],
     links: [
